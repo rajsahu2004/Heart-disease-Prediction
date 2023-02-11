@@ -1,7 +1,7 @@
 import numpy as np
 import pickle
 import streamlit as st
-loadedModel = pickle.load(open('trainingModel.sav','rb'))
+loadedModel = pickle.load(open('./trainingModel.sav','rb'))
 def heartDiseasePrediction(inputData):
     inputData = np.asarray(inputData).reshape(1,-1)
     prediction = loadedModel.predict(inputData)
