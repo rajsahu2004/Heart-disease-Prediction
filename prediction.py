@@ -1,6 +1,6 @@
 import numpy as np
 import pickle
-loadedModel = pickle.load(open("C:/Users/sahur/OneDrive/Documents/Python/ML Projects/Heart disease Prediction/trainingModel.sav",'rb'))
+loadedModel = pickle.load(open("./trainingModel.sav",'rb'))
 inputData = np.array([71,0,0,112,149,0,1,125,0,1.6,1,0,2]).reshape(1,-1)
 prediction = loadedModel.predict(inputData)
 if prediction[0] == 1:
